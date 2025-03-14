@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
-import 'userdata.dart';
 
+import 'package:flutter_application_1/studentBloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'userdata.dart';
+import 'ListStudent.dart';
 import 'ShoppingPage.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: LoginPage(),
+    home:
+        BlocProvider(create: (context) => studentBloc(), child: Liststudent()),
     debugShowCheckedModeBanner: false,
   ));
 }
